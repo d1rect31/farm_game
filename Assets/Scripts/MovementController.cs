@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
     public float speed;
     Animator animComponent;
     
@@ -44,8 +44,14 @@ public class MovementController : MonoBehaviour
         else {animComponent.SetBool("WalkRight", false);}
         moveVector.Normalize();
         rigidbody.velocity = moveVector * speed;
-
-
+        if (moveVector == Vector3.zero)
+        {
+            animComponent.SetBool("WalkLeft", false);
+            animComponent.SetBool("WalkDown", false);
+            animComponent.SetBool("WalkRight", false);
+            animComponent.SetBool("WalkUp", false);
+        }
+        // костыльный метод но ладно !!
         ///animation player
     }
 }
