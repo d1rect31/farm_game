@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.Progress;
 
@@ -12,9 +13,10 @@ public class InventoryUI : MonoBehaviour
     void Start()
     {
         UpdateUI();
+        GetComponentInParent<Canvas>().enabled = false;
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         // Удаляем все дочерние объекты
         foreach (Transform child in transform)
@@ -27,6 +29,14 @@ public class InventoryUI : MonoBehaviour
         {
             GameObject itemUI = Instantiate(itemUIPrefab, transform);
             itemUI.GetComponent<ItemUI>().Setup(item);
+        }
+    }
+    // inventory off-on
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            GetComponentInParent<Canvas>().enabled = !GetComponentInParent<Canvas>().enabled;
         }
     }
 }

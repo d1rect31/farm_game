@@ -18,6 +18,7 @@ public class MovementController : MonoBehaviour
     void Update()
     {   
         Vector3 moveVector = Vector3.zero;
+        ///animation player
         if (Input.GetKey(KeyCode.W)) 
         {
             moveVector += new Vector3(0, 1, 0);
@@ -44,6 +45,7 @@ public class MovementController : MonoBehaviour
         else {animComponent.SetBool("WalkRight", false);}
         moveVector.Normalize();
         rigidbody.velocity = moveVector * speed;
+        // костыльный метод но ладно !!
         if (moveVector == Vector3.zero)
         {
             animComponent.SetBool("WalkLeft", false);
@@ -51,7 +53,5 @@ public class MovementController : MonoBehaviour
             animComponent.SetBool("WalkRight", false);
             animComponent.SetBool("WalkUp", false);
         }
-        // костыльный метод но ладно !!
-        ///animation player
     }
 }

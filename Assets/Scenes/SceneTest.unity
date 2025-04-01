@@ -379,7 +379,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1794798165
   m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &268844474
@@ -896,6 +896,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2798da63e554cc4498db7dc7713692e8, type: 3}
+--- !u!114 &953031378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7544297479683016962, guid: 2798da63e554cc4498db7dc7713692e8, type: 3}
+  m_PrefabInstance: {fileID: 791325720}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e1625de9b3d5a49aa415e2c062a9f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1057157139
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,6 +3694,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888496280}
     - target: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
+      propertyPath: inventoryUI
+      value: 
+      objectReference: {fileID: 953031378}
+    - target: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
       propertyPath: items.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -3692,6 +3707,18 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 80745aa3f01d8a34eb794eb32c149cc8, type: 2}
     - target: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
       propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a1ed7a4d919907b42b4f603a6c4868b2, type: 2}
+    - target: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: a1ed7a4d919907b42b4f603a6c4868b2, type: 2}
+    - target: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
+      propertyPath: items.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: a1ed7a4d919907b42b4f603a6c4868b2, type: 2}
+    - target: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
+      propertyPath: items.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: a1ed7a4d919907b42b4f603a6c4868b2, type: 2}
     - target: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
@@ -3933,6 +3960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a948c95ff3bb5fa409a945a88b31b8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ItemID: {fileID: 11400000, guid: 4e31ae1cf5472864b9671b90f379045e, type: 2}
   interacted:
     m_PersistentCalls:
       m_Calls:
@@ -3948,6 +3976,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerInventory: {fileID: 1542275010}
 --- !u!58 &1961775987
 CircleCollider2D:
   m_ObjectHideFlags: 0
