@@ -15,7 +15,6 @@ public class Sapling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     Debug.Log(Time.time);
      if (Convert.ToInt32(Time.time) == 5) 
      {
         Destroy(gameObject);

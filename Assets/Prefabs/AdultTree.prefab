@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7358605144877937902}
   - component: {fileID: 3402016228435662977}
   - component: {fileID: -7544992818632940083}
+  - component: {fileID: 4830275335396939368}
+  - component: {fileID: -7920348909107285841}
   m_Layer: 0
   m_Name: AdultTree
   m_TagString: Untagged
@@ -99,6 +101,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713328181ae133b46b0150008b2f0f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4830275335396939368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940611381275171337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a948c95ff3bb5fa409a945a88b31b8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: {fileID: 0}
+  interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4830275335396939368}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: Harvest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerInventory: {fileID: 0}
+  drop: {fileID: 221570558831005034, guid: ac18b1f75a8f7824b9905e109ee436b8, type: 3}
+--- !u!58 &-7920348909107285841
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940611381275171337}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &3222627575870108353
 GameObject:
   m_ObjectHideFlags: 0
