@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,9 @@ public class Interactable : MonoBehaviour
     public void Interact() 
     {
         interacted.Invoke();
+    }
+    public void AddToInventory() 
+    {
         playerInventory.AddItem(ItemID);
     }
 }
