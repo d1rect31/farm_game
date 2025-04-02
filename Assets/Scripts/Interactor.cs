@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interactor : MonoBehaviour
 {
+    private bool CanInteract = false;
     private Interactable currentInteractable;
     private void OnTriggerEnter2D(Collider2D other) 
     {
@@ -12,6 +13,7 @@ public class Interactor : MonoBehaviour
         {
             currentInteractable = interactable;
             Debug.Log("It's interactable");
+            CanInteract = true;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -22,12 +24,13 @@ public class Interactor : MonoBehaviour
             if (interactable == currentInteractable) 
             {
                 currentInteractable = null;
+                CanInteract = false;
             }
         }
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) 
+        if (Input.GetKeyDown(KeyCode.E) && CanInteract) 
         {
             currentInteractable.Interact();
         }
