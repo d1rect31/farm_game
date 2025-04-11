@@ -7,7 +7,7 @@ using static UnityEditor.Progress;
 public class InventoryUI : MonoBehaviour
 {
     public Inventory playerInventory;
-    public GameObject itemUIPrefab;
+    [SerializeField] private GameObject itemUIPrefab;
     
 
     void Start()
@@ -25,10 +25,12 @@ public class InventoryUI : MonoBehaviour
         }
 
         // Создаем новые объекты ItemUI
-        foreach (Item item in playerInventory.items)
+        foreach (KeyValuePair<Item, int> entry in playerInventory.items)
         {
+            Item item = entry.Key; // Получаем ключ (Item) из пары
+            int count = entry.Value; // Получаем значение (количество) из пары
             GameObject itemUI = Instantiate(itemUIPrefab, transform);
-            itemUI.GetComponent<ItemUI>().Setup(item);
+            itemUI.GetComponent<ItemUI>().Setup(item, count);
         }
     }
     // inventory off-on

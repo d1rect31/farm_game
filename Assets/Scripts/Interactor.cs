@@ -17,7 +17,7 @@ public class Interactor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         Interactable interactable = other.GetComponent<Interactable>();
-        if (interactable == null)
+        if (interactable != null)
         {
             if (interactable == currentInteractable) 
             {

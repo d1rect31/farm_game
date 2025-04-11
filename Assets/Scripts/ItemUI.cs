@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class ItemUI : MonoBehaviour
 {
-    public Text idText;
-    public Text descriptionText;
-    public Image itemImage;
+    [SerializeField] private Text idText;
+    [SerializeField] private Text descriptionText;
+    [SerializeField] private Text countText;
+    [SerializeField] private Image itemImage;
 
-    public void Setup(Item item)
+    public void Setup(Item item, int count)
     {
-        //idText.text = item.id;
+        idText.text = item.id;
         //descriptionText.text = item.description;
         itemImage.sprite = item.sprite;
+        countText.text = $"{count}"; // Display the count
     }
 }
