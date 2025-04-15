@@ -29,7 +29,10 @@ public class Interactor : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E)) 
         {
-            currentInteractable.Interact();
+            if (currentInteractable != null)
+            {
+                currentInteractable.Interact();
+            }
         }
     }
 }

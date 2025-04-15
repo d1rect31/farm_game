@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 288ae2cb6e694d4439a1ac65cbafcfee
+guid: 486e73499de7b184782c676d3dea84e1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,232 +97,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MushroomTrees_0
+      name: Buildings_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 176
+        y: 240
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9169e52e8ceaaa64999558809d928bc2
-      internalID: 2084231721
+      spriteID: 946e57144d360c34f9cf64f22348dcdb
+      internalID: 1795846392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomTrees_1
+      name: Buildings_1
       rect:
         serializedVersion: 2
         x: 16
-        y: 176
+        y: 240
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 16, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a566458c1f0f3044a4a5861089a3279
-      internalID: 377135833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MushroomTrees_5
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ab48235280ba549acb766a905cb88d
-      internalID: -520125666
+      spriteID: 8b0a5e244b90d1d4c868142c9b50ed19
+      internalID: -642196215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomTrees_4
+      name: Buildings_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 160
+        y: 240
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e78cd221df201cc43b5a7894ebc1afdf
-      internalID: 1157484866
+      spriteID: f6beab8d8b0fe99498c7a71d90d60b46
+      internalID: 986185687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomTrees_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64b4cc2a637f91d428dd57170cd8eb0c
-      internalID: 1634688134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MushroomTrees_2
+      name: Buildings_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
+        y: 224
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25ab45e3d6ea9e64a9fb813ccd854a72
-      internalID: -632952014
+      spriteID: 400f773ee414ad248a480cc19a1830c8
+      internalID: -145962117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomTrees_3
+      name: Buildings_4
       rect:
         serializedVersion: 2
         x: 16
-        y: 160
+        y: 224
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d9a6fc0a739c854289cfa19465e80a7
-      internalID: -210833505
+      spriteID: dce384439e24e1241ae6620a599cfdff
+      internalID: 1373579576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomTrees_7
+      name: Buildings_5
       rect:
         serializedVersion: 2
-        x: 48
-        y: 160
+        x: 32
+        y: 224
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1828e84178bb8344db59fa8a1b1c719b
-      internalID: 1642328057
+      spriteID: 8a24b6d80d737044cbba17cf620887bb
+      internalID: 822291922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomTrees_8
+      name: Buildings_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
+        x: 0
+        y: 208
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c4f786b2c20ae44d8967087d957c7b0
-      internalID: 1011781650
+      spriteID: 83392fbaa97eb18409fd3e75d3b035e8
+      internalID: -1909215361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomTrees_9
+      name: Buildings_7
       rect:
         serializedVersion: 2
-        x: 48
-        y: 144
+        x: 16
+        y: 208
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e85b44040abb76448cae9dee46191ee
-      internalID: 1574858473
+      spriteID: e3493e9f6bbb6184ab5b322093147302
+      internalID: -532380453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomTrees_10
+      name: Buildings_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 144
+        x: 32
+        y: 208
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 629c94be8054ebd49a4a85b666f0439b
-      internalID: 2087645944
+      spriteID: fce6cfdb6da56364f91bc74d80d1754c
+      internalID: 545031294
       vertices: []
       indices: 
       edges: []
@@ -338,17 +296,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MushroomTrees_0: 2084231721
-      MushroomTrees_1: 377135833
-      MushroomTrees_10: 2087645944
-      MushroomTrees_2: -632952014
-      MushroomTrees_3: -210833505
-      MushroomTrees_4: 1157484866
-      MushroomTrees_5: -520125666
-      MushroomTrees_6: 1634688134
-      MushroomTrees_7: 1642328057
-      MushroomTrees_8: 1011781650
-      MushroomTrees_9: 1574858473
+      Buildings_0: 1795846392
+      Buildings_1: -642196215
+      Buildings_2: 986185687
+      Buildings_3: -145962117
+      Buildings_4: 1373579576
+      Buildings_5: 822291922
+      Buildings_6: -1909215361
+      Buildings_7: -532380453
+      Buildings_8: 545031294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

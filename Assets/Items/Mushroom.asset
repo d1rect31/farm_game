@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: mushroom
   description: surely not psychoactive
-  sprite: {fileID: -632952014, guid: 288ae2cb6e694d4439a1ac65cbafcfee, type: 3}
+  sprite: {fileID: 1157484866, guid: 288ae2cb6e694d4439a1ac65cbafcfee, type: 3}
