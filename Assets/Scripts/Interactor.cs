@@ -5,12 +5,14 @@ using UnityEngine;
 public class Interactor : MonoBehaviour
 {
     private Interactable currentInteractable;
+    private List<Interactable> interactables;
     private void OnTriggerEnter2D(Collider2D other) 
     {
         Interactable interactable = other.GetComponent<Interactable>();
         if (interactable != null)
         {
             currentInteractable = interactable;
+
             Debug.Log("It's interactable");
         }
     }
@@ -21,6 +23,7 @@ public class Interactor : MonoBehaviour
         {
             if (interactable == currentInteractable) 
             {
+
                 currentInteractable = null;
             }
         }
@@ -34,5 +37,20 @@ public class Interactor : MonoBehaviour
                 currentInteractable.Interact();
             }
         }
+    }
+    private Interactable GetPriorityInteractable() 
+    {
+        float minDistance = Vector2.Distance(transform.position, interactables[0].transform.position);
+        Interactable priorityInteractable = interactables[0];
+        foreach(var interactable in interactables ) 
+        {
+            float distance = Vector2.Distance(transform.position, interactable.transform.position);
+            if(distance < minDistance)
+            { 
+                priorityInteractable = interactable;
+                minDistance = distance;
+            }
+        }
+        return priorityInteractable;
     }
 }
