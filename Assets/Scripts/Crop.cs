@@ -31,13 +31,13 @@ public class Crop : MonoBehaviour
             spriteRenderer.sprite = growthStages[currentStage]; // Обновить спрайт
         }
 
-        // После достижения последнего этапа заменить на Collectable
+        // После достижения последнего этапа заменить на collectablePrefab
         yield return new WaitForSeconds(growthTime);
-        SpawnCollectable();
+        SpawnObject();
         Destroy(gameObject); // Удалить текущий объект
     }
 
-    private void SpawnCollectable()
+    private void SpawnObject()
     {
         GameObject collectable = Instantiate(collectablePrefab, transform.position, Quaternion.identity);
 

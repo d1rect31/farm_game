@@ -27,8 +27,8 @@ public class InventoryUI : MonoBehaviour
         // Создаем новые объекты ItemUI
         foreach (KeyValuePair<Item, int> entry in playerInventory.items)
         {
-            Item item = entry.Key; // Получаем ключ (Item) из пары
-            int count = entry.Value; // Получаем значение (количество) из пары
+            Item item = entry.Key; 
+            int count = entry.Value; 
             GameObject itemUI = Instantiate(itemUIPrefab, transform);
             itemUI.GetComponent<ItemUI>().Setup(item, count);
         }
