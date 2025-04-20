@@ -11,9 +11,11 @@ public class Interactor : MonoBehaviour
         Interactable interactable = other.GetComponent<Interactable>();
         if (interactable != null)
         {
-            currentInteractable = interactable;
-
-            Debug.Log("It's interactable");
+            if (!interactables.Contains(interactable))
+            {
+                interactables.Add(interactable);
+            }
+            //Debug.Log("Interactable added: " + interactable.name);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -21,15 +23,21 @@ public class Interactor : MonoBehaviour
         Interactable interactable = other.GetComponent<Interactable>();
         if (interactable != null)
         {
-            if (interactable == currentInteractable) 
+            if (interactables.Contains(interactable))
             {
+                interactables.Remove(interactable);
+            }
+            //Debug.Log("Interactable removed: " + interactable.name);
 
+            if (interactable == currentInteractable)
+            {
                 currentInteractable = null;
             }
         }
     }
     private void Update()
     {
+        currentInteractable = GetPriorityInteractable();
         if (Input.GetKeyDown(KeyCode.E)) 
         {
             if (currentInteractable != null)
@@ -38,8 +46,17 @@ public class Interactor : MonoBehaviour
             }
         }
     }
+    private void Start()
+    {
+        interactables = new List<Interactable>();
+    }
     private Interactable GetPriorityInteractable() 
     {
+        if (interactables == null || interactables.Count == 0)
+        {
+            return null; 
+        }
+        // Find the interactable with the highest priority (closest to the player)
         float minDistance = Vector2.Distance(transform.position, interactables[0].transform.position);
         Interactable priorityInteractable = interactables[0];
         foreach(var interactable in interactables ) 
