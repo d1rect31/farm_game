@@ -61,9 +61,14 @@ public class Interactor : MonoBehaviour
         Interactable priorityInteractable = interactables[0];
         foreach(var interactable in interactables ) 
         {
+            if (interactable.CompareTag("Plant"))
+            {
+                priorityInteractable = interactable;
+                return priorityInteractable;
+            }
             float distance = Vector2.Distance(transform.position, interactable.transform.position);
             if(distance < minDistance)
-            { 
+            {
                 priorityInteractable = interactable;
                 minDistance = distance;
             }

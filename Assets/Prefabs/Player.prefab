@@ -276,6 +276,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  footstepSource: {fileID: 0}
+  footstepClips:
+  - {fileID: 8300000, guid: 794493509594d4bb697b56ef9ce626e7, type: 3}
+  - {fileID: 8300000, guid: 5460ac676426e48bfafdabeb8c0eb114, type: 3}
+  - {fileID: 8300000, guid: f13adbc485b664e818d1142907a92dd3, type: 3}
+  - {fileID: 8300000, guid: 4f2246f672b9e46ec8589dbd58837c34, type: 3}
+  - {fileID: 8300000, guid: 4ecca8e88a4a3444684f1c569e8713da, type: 3}
+  - {fileID: 8300000, guid: 3392d1576cf7b4304a3d581096109b2c, type: 3}
+  - {fileID: 8300000, guid: 62636c5f040744d4ca380c08570084f1, type: 3}
+  - {fileID: 8300000, guid: edd1b76a8126c40cc9dbe11b45bd723e, type: 3}
+  stepInterval: 0.4
 --- !u!114 &7483393429270270868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
+  activeElement: {fileID: 0}
 --- !u!95 &3725302094692617491
 Animator:
   serializedVersion: 5

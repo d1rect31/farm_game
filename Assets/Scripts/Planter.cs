@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class Planter : MonoBehaviour
 {
-    public GameObject objectToPlant; // The prefab to instantiate
     public Transform playerTransform;
-
     public void Plant()
     {
         Inventory playerInventory = FindObjectOfType<Inventory>();
@@ -21,9 +19,9 @@ public class Planter : MonoBehaviour
             }
             if (playerInventory.items.ContainsKey(activeElement))
             {
-                Instantiate(objectToPlant, playerTransform.position, Quaternion.identity);
+                Instantiate(activeElement.prefab, playerTransform.position, Quaternion.identity);
                 playerInventory.RemoveItem(activeElement, 1); 
-                Debug.Log("Planted " + objectToPlant.name);
+                Debug.Log("Planted " + activeElement.name);
             }
             else
             {

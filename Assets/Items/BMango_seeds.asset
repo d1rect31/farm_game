@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d529457ea52bcc048aafc8688e39e9f4, type: 3}
-  m_Name: Wheat
+  m_Name: BMango_seeds
   m_EditorClassIdentifier: 
-  id: wheat
-  description: crazy wheat farma
-  prefab: {fileID: 0}
-  sprite: {fileID: 948708930, guid: f2505eba085cb0742a562b1d1ac3e6ce, type: 3}
+  id: Bubblegum Mango Seeds
+  description: 
+  sprite: {fileID: 1240691653, guid: f2505eba085cb0742a562b1d1ac3e6ce, type: 3}
+  prefab: {fileID: 6771842930749616299, guid: c7f80e743d5cbb24cba4d1514e4aa8a2, type: 3}
+  isSeed: 1

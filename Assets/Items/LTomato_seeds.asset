@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d529457ea52bcc048aafc8688e39e9f4, type: 3}
-  m_Name: Wheat_Seeds
+  m_Name: LTomato_seeds
   m_EditorClassIdentifier: 
-  id: wheat_seeds
-  description: plant it bro
-  prefab: {fileID: 0}
-  sprite: {fileID: 1240691653, guid: f2505eba085cb0742a562b1d1ac3e6ce, type: 3}
+  id: Lumi-Tomato Seeds
+  description: 
+  sprite: {fileID: -2006585136, guid: f2505eba085cb0742a562b1d1ac3e6ce, type: 3}
+  prefab: {fileID: 4395881082180997244, guid: f53fb99bc1955a24ab545dc16e80ae01, type: 3}
+  isSeed: 1
