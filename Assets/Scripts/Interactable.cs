@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,6 +8,8 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public Item ItemID;
+    public Inventory inventory;
+    [SerializeField] GameObject player;
     // public Inventory playerInventory;
     public UnityEvent onInteract; // Event to be triggered on interaction
     private void OnValidate()

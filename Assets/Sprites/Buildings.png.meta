@@ -105,7 +105,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +126,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,6 +155,27 @@ TextureImporter:
       bones: []
       spriteID: f6beab8d8b0fe99498c7a71d90d60b46
       internalID: 986185687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400f773ee414ad248a480cc19a1830c8
+      internalID: -145962117
       vertices: []
       indices: 
       edges: []
@@ -168,14 +189,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 400f773ee414ad248a480cc19a1830c8
-      internalID: -145962117
+      spriteID: dce384439e24e1241ae6620a599cfdff
+      internalID: 1373579576
       vertices: []
       indices: 
       edges: []
@@ -189,14 +210,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dce384439e24e1241ae6620a599cfdff
-      internalID: 1373579576
+      spriteID: 8a24b6d80d737044cbba17cf620887bb
+      internalID: 822291922
       vertices: []
       indices: 
       edges: []
@@ -210,14 +231,56 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a24b6d80d737044cbba17cf620887bb
-      internalID: 822291922
+      spriteID: 83392fbaa97eb18409fd3e75d3b035e8
+      internalID: -1909215361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3493e9f6bbb6184ab5b322093147302
+      internalID: -532380453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crate
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce6cfdb6da56364f91bc74d80d1754c
+      internalID: 545031294
       vertices: []
       indices: 
       edges: []
@@ -231,14 +294,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83392fbaa97eb18409fd3e75d3b035e8
-      internalID: -1909215361
+      spriteID: 04e3729667218e84d811a87570472b4a
+      internalID: 1360290320
       vertices: []
       indices: 
       edges: []
@@ -247,19 +310,19 @@ TextureImporter:
       name: Buildings_7
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 208
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3493e9f6bbb6184ab5b322093147302
-      internalID: -532380453
+      spriteID: df80b2e6995be534e8c4d22175381c6c
+      internalID: 1487676833
       vertices: []
       indices: 
       edges: []
@@ -273,14 +336,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fce6cfdb6da56364f91bc74d80d1754c
-      internalID: 545031294
+      spriteID: 335b8733c9b730b44b24d56a0fed920e
+      internalID: -1318796913
       vertices: []
       indices: 
       edges: []
@@ -299,12 +362,15 @@ TextureImporter:
       Buildings_0: 1795846392
       Buildings_1: -642196215
       Buildings_2: 986185687
-      Buildings_3: -145962117
-      Buildings_4: 1373579576
-      Buildings_5: 822291922
-      Buildings_6: -1909215361
-      Buildings_7: -532380453
-      Buildings_8: 545031294
+      Buildings_3: 1373579576
+      Buildings_4: 822291922
+      Buildings_5: -1909215361
+      Buildings_6: 1360290320
+      Buildings_7: 1487676833
+      Buildings_8: -1318796913
+      Crate: 545031294
+      Shop_1: -145962117
+      Shop_2: -532380453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
