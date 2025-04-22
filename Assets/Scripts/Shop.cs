@@ -37,7 +37,7 @@ public class Shop : Interactable
                 if (entry.item != null && entry.quantity > 0)
                 {
                     Debug.Log($"Bought {entry.quantity}x {entry.item.id}");
-                    playerInventory.AddItem(entry.item, entry.quantity); // �������� �������� � ���������
+                    playerInventory.AddItem(entry.item, entry.quantity);
                 }
             }
         }

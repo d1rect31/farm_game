@@ -1635,8 +1635,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1148400212}
-  - component: {fileID: 1148400214}
   - component: {fileID: 1148400215}
+  - component: {fileID: 1148400216}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -1661,8 +1661,29 @@ Transform:
   - {fileID: 465364812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1148400214
-CircleCollider2D:
+--- !u!114 &1148400215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148400210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d09dfe9537ab54d81c0dbef9480bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: {fileID: 0}
+  inventory: {fileID: 0}
+  player: {fileID: 0}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  itemsToBuy:
+  - item: {fileID: 11400000, guid: a1ed7a4d919907b42b4f603a6c4868b2, type: 2}
+    quantity: 3
+--- !u!61 &1148400216
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1690,33 +1711,22 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.22180128}
+  m_Offset: {x: 0, y: -0.21756124}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.7218013
---- !u!114 &1148400215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148400210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3d09dfe9537ab54d81c0dbef9480bbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: {fileID: 0}
-  inventory: {fileID: 0}
-  player: {fileID: 0}
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  itemsToBuy:
-  - item: {fileID: 11400000, guid: 80745aa3f01d8a34eb794eb32c149cc8, type: 2}
-    quantity: 3
+  m_Size: {x: 1, y: 1.4351225}
+  m_EdgeRadius: 0
 --- !u!4 &1216407644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5107596126899474164, guid: f53fb99bc1955a24ab545dc16e80ae01, type: 3}
@@ -2503,12 +2513,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da3c419906963854c97ff0344c0dccd3, type: 3}
+--- !u!1 &1528895156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7893289760939229378, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
+  m_PrefabInstance: {fileID: 1888496276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1542275010 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
   m_PrefabInstance: {fileID: 1888496276}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1528895156}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7215a8155d3262644af18b2fe3155f3f, type: 3}
@@ -2740,6 +2755,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700927787}
+  - component: {fileID: 1700927788}
+  - component: {fileID: 1700927789}
   m_Layer: 0
   m_Name: SellingCrate
   m_TagString: Untagged
@@ -2763,6 +2780,69 @@ Transform:
   - {fileID: 880013269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700927788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700927786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aae03b44da011342ba5bccf9a6a0be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: {fileID: 0}
+  inventory: {fileID: 1542275010}
+  player: {fileID: 1528895156}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &1700927789
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700927786}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.24087095}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.4817419}
+  m_EdgeRadius: 0
 --- !u!4 &1708264212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5107596126899474164, guid: fb5be678c174402489d6b4ace39900b9, type: 3}
@@ -15463,7 +15543,7 @@ PrefabInstance:
     - target: {fileID: 7483393429270270868, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
       propertyPath: activeElement
       value: 
-      objectReference: {fileID: 11400000, guid: d061a048c19154a41bc7ecfc1fc11354, type: 2}
+      objectReference: {fileID: 11400000, guid: 80745aa3f01d8a34eb794eb32c149cc8, type: 2}
     - target: {fileID: 7893289760939229378, guid: 42f4669420c07f9448d616d7a928c490, type: 3}
       propertyPath: m_Name
       value: Player
