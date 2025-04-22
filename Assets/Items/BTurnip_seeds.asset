@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d529457ea52bcc048aafc8688e39e9f4, type: 3}
   m_Name: BTurnip_seeds
   m_EditorClassIdentifier: 
-  id: Lumi-Tomato Seeds
+  id: Blue Turnip Seeds
   description: 
   sprite: {fileID: -2048068517, guid: f2505eba085cb0742a562b1d1ac3e6ce, type: 3}
   prefab: {fileID: 4395881082180997244, guid: da3c419906963854c97ff0344c0dccd3, type: 3}
