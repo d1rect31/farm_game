@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1983775765318757414}
   m_Layer: 0
   m_Name: Collectable
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,10 +99,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemID: {fileID: 11400000, guid: 4e31ae1cf5472864b9671b90f379045e, type: 2}
-  playerInventory: {fileID: 0}
+  inventory: {fileID: 0}
+  player: {fileID: 0}
   onInteract:
     m_PersistentCalls:
       m_Calls: []
+  itemsToHarvest: []
 --- !u!58 &1983775765318757414
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -9,11 +9,11 @@ public class Harvestable : Interactable
     [System.Serializable]
     public class ItemEntry
     {
-        public Item item; // Предмет
-        public int quantity; // Количество
+        public Item item;
+        public int quantity;
     }
 
-    [SerializeField] private List<ItemEntry> itemsToHarvest = new(); // Список предметов и их количества
+    [SerializeField] private List<ItemEntry> itemsToHarvest = new(); // List of items and their count
 
     // Публичное свойство для доступа к itemsToHarvest
     public List<ItemEntry> ItemsToHarvest
@@ -31,7 +31,7 @@ public class Harvestable : Interactable
             if (entry.item != null && entry.quantity > 0)
             {
                 Debug.Log($"Harvested {entry.quantity}x {entry.item.id}");
-                playerInventory.AddItem(entry.item, entry.quantity); // Добавить предметы в инвентарь
+                playerInventory.AddItem(entry.item, entry.quantity); // Add the item to the player's inventory
             }
         }
 

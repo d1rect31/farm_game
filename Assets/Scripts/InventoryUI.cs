@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEditor.Progress;
 
 public class InventoryUI : MonoBehaviour
@@ -27,10 +28,19 @@ public class InventoryUI : MonoBehaviour
         // Создаем новые объекты ItemUI
         foreach (KeyValuePair<Item, int> entry in playerInventory.items)
         {
-            Item item = entry.Key; 
-            int count = entry.Value; 
+            Item item = entry.Key;
+            int count = entry.Value;
             GameObject itemUI = Instantiate(itemUIPrefab, transform);
-            itemUI.GetComponent<ItemUI>().Setup(item, count);
+
+            // Настраиваем ItemUI
+            var itemUIScript = itemUI.GetComponent<ItemUI>();
+            itemUIScript.Setup(item, count, playerInventory);
+
+            // Добавляем обработчик клика
+            if (itemUI.TryGetComponent<Button>(out var button))
+            {
+                button.onClick.AddListener(itemUIScript.OnClick);
+            }
         }
     }
     // inventory off-on

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using System.Linq;
 public class Inventory : MonoBehaviour
 {
     public int money = 0;
     public Dictionary<Item, int> items = new();
-    [SerializeField] private InventoryUI inventoryUI;
+    public InventoryUI inventoryUI;
     public Item activeElement;
     public void Start()
     {
@@ -21,11 +21,11 @@ public class Inventory : MonoBehaviour
             {
                 if (items.ContainsKey(item))
                 {
-                    items[item] += 1; // ����������� �������� �� 1
+                    items[item] += 1; 
                 }
                 else
                 {
-                    items.Add(item, 1); // ��������� ����� ���� � ��������� ��������� 1
+                    items.Add(item, 1); 
                 }
                 inventoryUI.UpdateUI();
             }

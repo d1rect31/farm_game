@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: growthStages.Array.data[3]
       value: 
       objectReference: {fileID: 594590808, guid: f2505eba085cb0742a562b1d1ac3e6ce, type: 3}
+    - target: {fileID: 2186414534451563368, guid: 54e01f9ec2c94ad43b5566f4fcc75bad, type: 3}
+      propertyPath: itemsToHarvest.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ebefaeb7aec30b4bb4bb3d7cb847ef2, type: 2}
+    - target: {fileID: 2186414534451563368, guid: 54e01f9ec2c94ad43b5566f4fcc75bad, type: 3}
+      propertyPath: itemsToHarvest.Array.data[1].item
+      value: 
+      objectReference: {fileID: 11400000, guid: e390447ad15ee744d9788846feb956b9, type: 2}
     - target: {fileID: 3978528086792431317, guid: 54e01f9ec2c94ad43b5566f4fcc75bad, type: 3}
       propertyPath: m_Name
       value: Plant5

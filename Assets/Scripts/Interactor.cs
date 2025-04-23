@@ -59,18 +59,30 @@ public class Interactor : MonoBehaviour
         // Find the interactable with the highest priority (closest to the player)
         float minDistance = Vector2.Distance(transform.position, interactables[0].transform.position);
         Interactable priorityInteractable = interactables[0];
-        foreach(var interactable in interactables ) 
+        foreach (var interactable in interactables)
         {
-            if (interactable.CompareTag("Plant"))
-            {
-                priorityInteractable = interactable;
-                return priorityInteractable;
-            }
             float distance = Vector2.Distance(transform.position, interactable.transform.position);
-            if(distance < minDistance)
+            // If the interactable is a Collectable, give it priority
+            if (interactable.CompareTag("Collectable"))
             {
-                priorityInteractable = interactable;
-                minDistance = distance;
+                if(distance < minDistance)
+                {
+                    priorityInteractable = interactable;
+                    minDistance = distance;
+                }
+            }
+        }
+        // If no Collectable interactable is found, find the closest one
+        if (priorityInteractable == null)
+        {
+            foreach (var interactable in interactables)
+            {
+                float distance = Vector2.Distance(transform.position, interactable.transform.position);
+                if(distance < minDistance)
+                {
+                    priorityInteractable = interactable;
+                    minDistance = distance;
+                }
             }
         }
         return priorityInteractable;

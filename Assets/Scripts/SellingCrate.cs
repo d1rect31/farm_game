@@ -41,6 +41,12 @@ public class SellingCrate : Interactable
                 inventory.money +=4;
                 Debug.Log("Sold 1 Lumi-Tomato for 3 money");
             }
+            else if (itemToSell.id == "Pink Onion")
+            {
+                inventory.RemoveItem(itemToSell, 1);
+                inventory.money += 4;
+                Debug.Log("Sold 1 Pink Onion for 3 money");
+            }
         }
         else {Debug.Log("You have nothing to sell");} 
     }

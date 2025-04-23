@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class Crop : MonoBehaviour
 {
-    [SerializeField] private Sprite[] growthStages; // Массив спрайтов для каждого этапа роста
-    [SerializeField] private GameObject collectablePrefab; // Префаб для финального состояния
-    [SerializeField] private float growthTime = 5f; // Время между этапами роста
-    [SerializeField] private List<Harvestable.ItemEntry> itemsToHarvest = new(); // Список предметов и их количества
+    [SerializeField] private Sprite[] growthStages;
+    [SerializeField] private GameObject collectablePrefab;
+    [SerializeField] private float growthTime = 5f;
+    [SerializeField] private List<Harvestable.ItemEntry> itemsToHarvest = new();
 
-    private int currentStage = 0; // Текущее состояние роста
+    private int currentStage = 0; 
     private SpriteRenderer spriteRenderer;
+
+    private Plantable plantingSlot;
+
+    public void SetPlantingSlot(Plantable slot)
+    {
+        plantingSlot = slot;
+    }
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (growthStages.Length > 0)
         {
-            spriteRenderer.sprite = growthStages[currentStage]; // Установить начальный спрайт
+            spriteRenderer.sprite = growthStages[currentStage];
         }
         StartCoroutine(Grow());
     }
@@ -26,33 +33,38 @@ public class Crop : MonoBehaviour
     {
         while (currentStage < growthStages.Length - 1)
         {
-            yield return new WaitForSeconds(growthTime); // Ждать указанное время
+            yield return new WaitForSeconds(growthTime);
             currentStage++;
-            spriteRenderer.sprite = growthStages[currentStage]; // Обновить спрайт
+            spriteRenderer.sprite = growthStages[currentStage];
         }
 
-        // После достижения последнего этапа заменить на collectablePrefab
-        yield return new WaitForSeconds(growthTime);
+        // Replace the crop with the collectable object
         SpawnObject();
-        Destroy(gameObject); // Удалить текущий объект
+        Destroy(gameObject);
     }
 
     private void SpawnObject()
     {
         GameObject collectable = Instantiate(collectablePrefab, transform.position, Quaternion.identity);
 
-        // Установить текстуру последнего состояния
+        // Setting the sprite of the collectable depending on the last growth stage
         var collectableSpriteRenderer = collectable.GetComponent<SpriteRenderer>();
         if (collectableSpriteRenderer != null)
         {
             collectableSpriteRenderer.sprite = growthStages[growthStages.Length - 1];
         }
 
-        // Присвоить массив предметов через компонент Harvestable
+        // Assinging the items to harvest
         var harvestable = collectable.GetComponent<Harvestable>();
         if (harvestable != null)
         {
             harvestable.ItemsToHarvest = itemsToHarvest; // Передать список предметов и их количества
+        }
+
+        // Free the planting slot
+        if (plantingSlot != null)
+        {
+            plantingSlot.GetType().GetField("isOccupied", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(plantingSlot, false);
         }
     }
 }

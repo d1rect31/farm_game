@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7360642711098624780, guid: 74ebf5663973e154d938e72e183d4248, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7360642711098624780, guid: 74ebf5663973e154d938e72e183d4248, type: 3}
       propertyPath: m_LocalPosition.z
@@ -67,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 7616165839067825742, guid: 74ebf5663973e154d938e72e183d4248, type: 3}
       propertyPath: m_Name
       value: SmallMushroom Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616165839067825742, guid: 74ebf5663973e154d938e72e183d4248, type: 3}
+      propertyPath: m_TagString
+      value: Collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

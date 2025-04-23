@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d529457ea52bcc048aafc8688e39e9f4, type: 3}
-  m_Name: BMango 1
+  m_Name: POnion
   m_EditorClassIdentifier: 
-  id: Bubblegum Mango
+  id: Pink Onion
   description: 
   sprite: {fileID: -1687190535, guid: f2505eba085cb0742a562b1d1ac3e6ce, type: 3}
   prefab: {fileID: 0}
