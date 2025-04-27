@@ -18,6 +18,8 @@ public class MovementController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animComponent = GetComponent<Animator>();
+        var startpos = new Vector2(-2,3);
+        gameObject.transform.position = startpos;
     }
 
     void Update()

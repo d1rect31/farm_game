@@ -25,5 +25,9 @@ public class Interactable : MonoBehaviour
     {
         onInteract?.Invoke(); // Trigger the event if there are any listeners  
     }
+    private void Teleport() 
+    {
+        
+    }
 }
 
