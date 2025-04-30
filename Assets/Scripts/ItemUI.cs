@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class ItemUI : MonoBehaviour
 {
