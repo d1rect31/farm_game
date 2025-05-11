@@ -18,24 +18,24 @@ public class InventoryUI : MonoBehaviour
 
     public void UpdateUI()
     {
-        // Удаляем все дочерние объекты
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
         }
 
-        // Создаем новые объекты ItemUI
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ItemUI
         foreach (KeyValuePair<Item, int> entry in playerInventory.items)
         {
             Item item = entry.Key;
             int count = entry.Value;
             GameObject itemUI = Instantiate(itemUIPrefab, transform);
 
-            // Настраиваем ItemUI
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ItemUI
             var itemUIScript = itemUI.GetComponent<ItemUI>();
             itemUIScript.Setup(item, count, playerInventory);
 
-            // Добавляем обработчик клика
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
             if (itemUI.TryGetComponent<Button>(out var button))
             {
                 button.onClick.AddListener(itemUIScript.OnClick);

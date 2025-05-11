@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -14,7 +15,6 @@ public class Shop : Interactable
     }
 
     [SerializeField] private List<ItemEntry> itemsToBuy = new(); // ������ ��������� � �� ����������
-    [SerializeField] private Text eventDescriptor;
 
     // ��������� �������� ��� ������� � itemsToHarvest
     public List<ItemEntry> ItemsToBuy
@@ -25,11 +25,11 @@ public class Shop : Interactable
     // Start is called before the first frame update
     void Start()
     {
-        
     }
     public override void Interact()
     {
         Inventory playerInventory = FindObjectOfType<Inventory>();
+        HUD hud = FindObjectOfType<HUD>();
         var money = playerInventory.money;
         if (money>3) 
         {
@@ -39,12 +39,12 @@ public class Shop : Interactable
                 if (entry.item != null && entry.quantity > 0)
                 {
                     Debug.Log($"Bought {entry.quantity}x {entry.item.id}");
-                    eventDescriptor.text = $"Bought {entry.quantity}x {entry.item.id}";
+                    hud.DescribeEvent($"Bought {entry.quantity}x {entry.item.id}");
                     playerInventory.AddItem(entry.item, entry.quantity);
                 }
             }
         }
-        else {Debug.Log("Not enough money"); eventDescriptor.text = "Not enough money";};
+        else {Debug.Log("Not enough money"); hud.DescribeEvent("Not enough money");};
         onInteract?.Invoke();
     }
 }

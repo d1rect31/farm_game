@@ -3,11 +3,10 @@ using UnityEngine.UI;
 
 public class ItemUI : MonoBehaviour
 {
-    [SerializeField] private Text idText;
     [SerializeField] private Text descriptionText;
     [SerializeField] private Text countText;
     [SerializeField] private Image itemImage;
-    [SerializeField] private GameObject selectedOutline; // Ссылка на объект SelectedOutline
+    [SerializeField] private GameObject selectedOutline; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ SelectedOutline
 
     private Item item;
     private Inventory inventory;
@@ -16,10 +15,9 @@ public class ItemUI : MonoBehaviour
     {
         this.item = item;
         this.inventory = inventory;
-        idText.text = item.id;
         itemImage.sprite = item.sprite;
         countText.text = $"{count}";
-        UpdateSelectedOutline(); // Обновляем состояние SelectedOutline
+        UpdateSelectedOutline(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ SelectedOutline
     }
 
     public void OnClick()
@@ -27,7 +25,7 @@ public class ItemUI : MonoBehaviour
         if (inventory != null)
         {
             inventory.SetActiveElement(item);
-            inventory.inventoryUI.UpdateUI(); // Обновляем UI после выбора
+            inventory.inventoryUI.UpdateUI(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ UI пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         }
     }
 
