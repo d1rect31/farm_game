@@ -61,6 +61,10 @@ PrefabInstance:
       value: BTurnipShop Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8056156585767680533, guid: 3e6332ba4d38f4746ab8dadd9121574e, type: 3}
+      propertyPath: ItemID
+      value: 
+      objectReference: {fileID: 11400000, guid: e390447ad15ee744d9788846feb956b9, type: 2}
+    - target: {fileID: 8056156585767680533, guid: 3e6332ba4d38f4746ab8dadd9121574e, type: 3}
       propertyPath: itemsToBuy.Array.data[0].item
       value: 
       objectReference: {fileID: 11400000, guid: e390447ad15ee744d9788846feb956b9, type: 2}

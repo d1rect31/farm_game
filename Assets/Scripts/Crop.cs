@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Crop : MonoBehaviour
 {
@@ -8,11 +13,14 @@ public class Crop : MonoBehaviour
     [SerializeField] private GameObject collectablePrefab;
     [SerializeField] private float growthTime = 5f;
     [SerializeField] private List<Harvestable.ItemEntry> itemsToHarvest = new();
+    [SerializeField] private Sprite glowing;
+    private Sprite[] bmango;
 
     private int currentStage = 0; 
     private SpriteRenderer spriteRenderer;
 
     private Plantable plantingSlot;
+    private Light2D light;
 
     public void SetPlantingSlot(Plantable slot)
     {
@@ -21,6 +29,7 @@ public class Crop : MonoBehaviour
 
     void Start()
     {
+        light = GetComponent<Light2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (growthStages.Length > 0)
         {
@@ -58,7 +67,7 @@ public class Crop : MonoBehaviour
         var harvestable = collectable.GetComponent<Harvestable>();
         if (harvestable != null)
         {
-            harvestable.ItemsToHarvest = itemsToHarvest; // Передать список предметов и их количества
+            harvestable.ItemsToHarvest = itemsToHarvest; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         }
 
         // Free the planting slot
