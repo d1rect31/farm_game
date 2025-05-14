@@ -1,9 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -16,11 +12,11 @@ public class Crop : MonoBehaviour
     [SerializeField] private Sprite glowing;
     private Sprite[] bmango;
 
-    private int currentStage = 0; 
+    private int currentStage = 0;
     private SpriteRenderer spriteRenderer;
 
     private Plantable plantingSlot;
-    private Light2D light;
+    private new Light2D light;
 
     public void SetPlantingSlot(Plantable slot)
     {

@@ -31,7 +31,7 @@ public class HUD : MonoBehaviour
                 eventDescriptor.text = "";
                 counting = false;
             }
-        Debug.Log(timer);
+        // Debug.Log(timer);
         }
         else {timer = normaltime; counting = false;}
     }
