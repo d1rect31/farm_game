@@ -22,10 +22,13 @@ public class Plantable : Interactable
             Debug.LogWarning("No active item selected for planting.");
             return;
         }
-        if (!playerInventory.items.ContainsKey(activeElement) || playerInventory.items[activeElement] <= 0)
+        if (!playerInventory.items.ContainsKey(activeElement) || playerInventory.items[activeElement] <= 0 )
         {
-            Debug.LogWarning("Not enough items in inventory to plant.");
-            return;
+            if (!playerInventory.itemsToolbar.ContainsKey(activeElement) || playerInventory.itemsToolbar[activeElement] <= 0 )
+            {
+                Debug.LogWarning("Not enough items in inventory to plant.");
+                return;
+            }
         }
         if (isOccupied)
         {

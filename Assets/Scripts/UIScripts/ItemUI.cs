@@ -26,6 +26,7 @@ public class ItemUI : MonoBehaviour
         {
             inventory.SetActiveElement(item);
             inventory.inventoryUI.UpdateUI(); // ��������� UI ����� ������
+            inventory.inventoryUI.UpdateToolbarUI();
         }
     }
 

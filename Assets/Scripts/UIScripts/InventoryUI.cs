@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class InventoryUI : MonoBehaviour
 {
     public Inventory playerInventory;
+    public GameObject toolbar;
     [SerializeField] private GameObject itemUIPrefab;
     
 
@@ -30,6 +31,32 @@ public class InventoryUI : MonoBehaviour
             Item item = entry.Key;
             int count = entry.Value;
             GameObject itemUI = Instantiate(itemUIPrefab, transform);
+
+            // ����������� ItemUI
+            var itemUIScript = itemUI.GetComponent<ItemUI>();
+            itemUIScript.Setup(item, count, playerInventory);
+
+            // ��������� ���������� �����
+            if (itemUI.TryGetComponent<Button>(out var button))
+            {
+                button.onClick.AddListener(itemUIScript.OnClick);
+            }
+        }
+    }
+    public void UpdateToolbarUI()
+    {
+        // ������� ��� �������� �������
+        foreach (Transform child in toolbar.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // ������� ����� ������� ItemUI
+        foreach (KeyValuePair<Item, int> entry in playerInventory.itemsToolbar)
+        {
+            Item item = entry.Key;
+            int count = entry.Value;
+            GameObject itemUI = Instantiate(itemUIPrefab, toolbar.transform);
 
             // ����������� ItemUI
             var itemUIScript = itemUI.GetComponent<ItemUI>();

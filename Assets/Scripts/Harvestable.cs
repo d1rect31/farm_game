@@ -15,7 +15,7 @@ public class Harvestable : Interactable
 
     [SerializeField] private List<ItemEntry> itemsToHarvest = new(); // List of items and their count
 
-    // Публичное свойство для доступа к itemsToHarvest
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ itemsToHarvest
     public List<ItemEntry> ItemsToHarvest
     {
         get => itemsToHarvest;
